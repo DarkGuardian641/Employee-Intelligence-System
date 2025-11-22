@@ -15,7 +15,7 @@ init_mail(app)
 # Configure CORS to allow requests from your React frontend
 CORS(app, resources={
     r"/*": {
-        "origins": ["http://localhost:3000", "http://localhost:5173"], 
+        "origins": ["http://localhost:3000", "http://localhost:5173"],  
         "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         "allow_headers": ["Content-Type", "Authorization"]
     }
