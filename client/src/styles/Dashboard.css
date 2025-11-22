@@ -1,0 +1,298 @@
+:root {
+    --dashboard-bg: #23272b;
+    --card-bg: #363b40;
+    --primary-text: #f5f6fa;
+    --secondary-text: #bcc6d0;
+    --accent-blue: #58a6ff;
+    --header-text: #aad4ff;
+  }
+  
+  body, .dashboard-root {
+    background: var(--dashboard-bg);
+  }
+  
+  /* Dashboard layout */
+  .dashboard-content-wrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: 42px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 30px 40px 30px;
+  }
+  
+  /* 2 columns: left is main + stats, right is employees */
+  .dashboard-row {
+    width: 100%;
+    display: flex;
+    gap: 38px;
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+  .dashboard-col {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    flex: 1;
+  }
+  
+  /* Profile top card (row) */
+  .profile-banner-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 30px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 12px rgba(40,50,65,0.10);
+  }
+  .avatar-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: #eee;
+    border: 2px solid var(--accent-blue);
+  }
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .profile-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-text);
+  }
+  .profile-role,
+  .profile-empid {
+    font-size: 0.93rem;
+    color: var(--secondary-text);
+  }
+  
+  /* Stats Row */
+  .stats-cards-row {
+    width: 100%;
+    display: flex;
+    gap: 28px;
+    justify-content: flex-start;
+  }
+  
+  .stat-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    flex: 1;
+    padding: 18px 0 13px 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(38,43,55,0.08);
+    justify-content: center;
+  }
+  .stat-card h3 {
+    margin: 0 0 7px 0;
+    color: var(--secondary-text);
+    font-size: 0.97rem;
+  }
+  
+  .stat-value {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+  }
+  
+  /* Employees Card */
+  .employees-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(38,43,55,0.08);
+    padding: 24px 17px 12px 25px;
+    min-width: 270px;
+    max-width: 280px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .employees-card h3 {
+    color: var(--header-text);
+    font-size: 1.07rem;
+    font-weight: bold;
+    margin-bottom: 17px;
+  }
+  .top-employees-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: var(--secondary-text);
+  }
+  .top-employees-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 0;
+    border-bottom: 1px solid #292c33;
+    font-size: 0.97rem;
+  }
+  .top-employees-list li:last-child {
+    border-bottom: none;
+  }
+  .emp-name {
+    font-weight: 600;
+    color: var(--primary-text);
+  }
+  .emp-role {
+    margin: 0 7px;
+    color: #7e99b4;
+  }
+  .emp-salary {
+    color: var(--accent-blue);
+    min-width: 66px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  
+  /* BOTTOM ROW: TASKS + CALENDAR */
+  .bottom-row {
+    width: 100%;
+    display: flex;
+    gap: 34px;
+    margin-top: 0;
+  }
+  .tasks-section,
+  .calendar-section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 22px 20px 14px 20px;
+    box-shadow: 0 1px 7px rgba(44,56,94,0.07);
+    flex: 1;
+    min-width: 290px;
+  }
+  .tasks-section h3,
+  .calendar-section h3 {
+    color: var(--header-text);
+    margin-bottom: 9px;
+    font-size: 0.98rem;
+    font-weight: 600;
+    text-align: left;
+  }
+  .add-task-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .add-task-form input[type="text"] {
+    flex: 1;
+    padding: 7px;
+    border: 1.5px solid var(--accent-blue);
+    background: #23272b;
+    border-radius: 5px;
+    font-size: 0.99em;
+    color: #d5e5fa;
+  }
+  .add-task-form input[type="text"]::placeholder {
+    color: #7f8b96;
+  }
+  .add-task-form button {
+    background: var(--accent-blue);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 7px 14px;
+    font-size: 0.97em;
+    cursor: pointer;
+  }
+  .added-tasks-list, .tasks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .added-tasks-list li {
+    display: flex;
+    align-items: center;
+    font-size: 0.96em;
+    color: #d0e0ec;
+    background: #23272b;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    padding: 5px 8px 5px 8px;
+    cursor: pointer;
+  }
+  .added-tasks-list li.completed {
+    background: #22372c;
+    color: #8bffb1;
+    text-decoration: line-through;
+  }
+  .empty-tasks { color: #8392a1; margin-left: 2px; }
+  
+  /* Calendar Table*/
+  .calendar-table {
+    width: 100%;
+    background: var(--card-bg);
+    border-radius: 6px;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #b9d6ef;
+    font-size: 1em;
+    margin-top: 12px;
+    box-shadow: 0 0 0 1.5px #27282b;
+  }
+  
+  .calendar-table th {
+    background: var(--card-bg);
+    color: #aad4ff;
+    font-weight: 600;
+    padding: 10px 0 9px 0;
+    border-bottom: 1.5px solid #34373c;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .calendar-table td {
+    text-align: center;
+    padding: 10px 0;
+    background: var(--card-bg);
+    color: #e4ecfa;
+    border: 1px solid #31343a;
+    border-top: none;
+    border-bottom: 1.5px solid #34373c;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .calendar-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .calendar-today {
+    background: var(--accent-blue);
+    color: #fff !important;
+    border-radius: 50%;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    font-weight: 600;
+  }
+  
+  .calendar-table td:not(:empty):hover {
+    background: #26282f;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 1100px) {
+    .dashboard-content-wrapper { max-width: 99vw; }
+    .dashboard-row, .bottom-row {
+      flex-direction: column;
+      gap: 18px;
+      align-items: stretch;
+    }
+    .employees-card { max-width: 100%; }
+    .tasks-section, .calendar-section { width: 100%; }
+  }

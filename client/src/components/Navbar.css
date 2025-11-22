@@ -1,0 +1,295 @@
+/* ==== Reset & Base ==== */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: Arial, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  background: #fafafa;
+  color: #000; /* Ensure black text */
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+/* ==== Navbar (full-width, always on top) ==== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 16px;
+}
+.navbar-brand h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #000; /* Ensure black brand text */
+  font-weight: 500;
+}
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: #000; /* Black links */
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.navbar-links a:hover {
+  background: #eee;
+  color: #000;
+}
+.navbar-links a.active {
+  background: #007bff;
+  color: #fff;
+}
+@media (max-width: 800px) {
+  .navbar-container {
+    flex-direction: column;
+    height: auto;
+    padding: 4px 4vw;
+    gap: 8px;
+  }
+  .navbar-links {
+    gap: 6px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ==== Main Wrapper & Centering ==== */
+.app, .dashboard-container, .employees-container, .predict-container, .analytics-container {
+  width: 100vw;
+  min-height: calc(100vh - 56px);
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
+  /* Padding-top ensures content is below fixed navbar */
+  padding: 88px 0 0 0;
+  box-sizing: border-box;
+  color: #000; /* Ensure black text */
+}
+
+/* ==== Headings (modern, centered) ==== */
+h1, h2, h3 {
+  width: 100%;
+  text-align: center;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  margin-top: 0;
+  color: #000; /* Black headings */
+}
+h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  letter-spacing: 0.5px;
+}
+h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 0 10px 0;
+}
+h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 8px 0;
+}
+
+/* ==== Card Section: All sections and cards center-aligned ==== */
+.section,
+.dashboard-info,
+.stats-grid,
+.form-section,
+.employee-list,
+.filter-section,
+.prediction-info,
+.predict-section,
+.charts-grid,
+.employee-list-full,
+.employee-top-section {
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  margin: 0 auto 24px auto;
+  box-sizing: border-box;
+  padding: 22px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: block;
+  color: #000; /* Ensure black text */
+}
+
+/* Compact grids for analytics/dashboard */
+.stats-grid,
+.charts-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+}
+.stat-card, .chart-card {
+  flex: 1 0 200px;
+  background: #fff;
+  padding: 18px 14px;
+  margin: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  min-width: 190px;
+  max-width: 325px;
+  color: #000; /* Ensure black text */
+}
+
+@media (max-width: 1000px) {
+  .section,
+  .dashboard-info,
+  .form-section,
+  .employee-list,
+  .filter-section,
+  .employee-list-full,
+  .prediction-info,
+  .predict-section {
+    max-width: 97vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  .stat-card, .chart-card {
+    min-width: 120px;
+    max-width: 99vw;
+  }
+}
+@media (max-width: 700px) {
+  .stats-grid, .charts-grid {
+    flex-direction: column;
+    gap: 0;
+  }
+  .stat-card, .chart-card {
+    width: 99vw;
+    min-width: 0;
+    margin-bottom: 16px;
+  }
+}
+
+/* ==== Buttons ==== */
+button {
+  background: #007bff;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 3px;
+}
+button:hover {
+  background: #0056b3;
+}
+.button-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+/* ==== Inputs and Selects ==== */
+input[type="text"], input[type="number"], select {
+  padding: 7px 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 14px;
+  width: 100%;
+  color: #000; /* Ensure black text inside inputs */
+}
+
+/* ==== Table ==== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  background: #fff;
+  color: #000; /* Black text inside tables */
+}
+th, td {
+  padding: 9px;
+  border: 1px solid #eee;
+  text-align: left;
+  font-size: 14px;
+}
+th {
+  background: #f0f0f0;
+  font-weight: 500;
+}
+tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+/* ==== Error ==== */
+.error-box {
+  background: #ffe6e6;
+  border: 1px solid #ff0000;
+  color: #cc0000;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  text-align: left;
+}
+
+/* Miscellaneous */
+.loading-text {
+  font-style: italic;
+  color: #888;
+}
+.empty-text {
+  color: #777;
+  font-size: 15px;
+  padding: 16px 0;
+}
+.filter-result {
+  color: #444;
+  font-size: 14px;
+  margin-top: 8px;
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Remove dark strip at bottom */
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  overflow-x: hidden;
+}

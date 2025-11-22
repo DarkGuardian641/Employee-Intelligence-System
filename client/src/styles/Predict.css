@@ -1,0 +1,192 @@
+:root {
+    --primary-bg: #181818;
+    --input-bg: #222226;
+    --primary-text: #f7f8fa;
+    --accent-blue: #4b82df;
+    --input-border: #34344a;
+    --divider: #27273a;
+    --error: #ff1644;
+    --success: #21E399;
+  }
+  
+  body {
+    background: var(--primary-bg);
+    color: var(--primary-text);
+  }
+  
+  .predict-bg {
+    min-height: 100vh;
+    color: var(--primary-text);
+    padding: 2.5rem 4vw 4rem 4vw;
+    box-sizing: border-box;
+    width: 100vw;
+  }
+  
+  /* Centered utility class for headings, labels, etc. */
+  .center {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block;
+  }
+  
+  /* Blue main heading */
+  .big-blue-title {
+    font-size: 2.6rem;
+    letter-spacing: 0.02em;
+    color: var(--accent-blue);
+    font-weight: 700;
+    margin-bottom: 0.55rem;
+  }
+  
+  .subtitle {
+    color: var(--accent-blue);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+  
+  /* Center form and fields */
+  .predict-form {
+    margin-bottom: 1.2rem;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1.1rem;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-row input,
+  .form-row select {
+    background: var(--input-bg);
+    color: var(--primary-text) !important;  /* Ensure white text */
+    font-size: 1.07rem;
+    padding: 0.85rem 1.2rem;
+    border-radius: 7px;
+    border: 1.6px solid var(--input-border);
+    outline: none;
+    flex: 1;
+    min-width: 180px;
+    max-width: 240px;
+  }
+  
+  /* Optionally, make placeholder text white too */
+  .form-row input::placeholder {
+    color: #f7f8fa;
+    opacity: 1;
+  }
+  
+  .btn-predict {
+    margin-top: 1rem;
+    padding: 0.95rem 3rem;
+    background: var(--accent-blue);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.19rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 2px 12px rgb(75 130 223 / 0.15);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  .btn-predict:hover {
+    background: #376abb;
+  }
+  
+  /* Error message box, centered below form */
+  .error-box {
+    background: var(--error);
+    color: white;
+    padding: 0.7rem;
+    border-radius: 6px;
+    text-align: center;
+    margin: 1.1rem auto 1rem auto;
+    font-size: 1.08rem;
+    width: fit-content;
+  }
+  
+  /* Prediction result section */
+  .result-label {
+    color: var(--accent-blue);
+    font-size: 1.18rem;
+    margin-top: 2.1rem;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+  }
+  
+  .predicted-rupee {
+    color: var(--primary-text);
+    font-size: 1.65rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  
+  .predicted-amount {
+    color: var(--success);
+    font-size: 2.2rem;
+    margin-left: 0.5rem;
+  }
+  
+  .predicted-placeholder {
+    color: var(--divider);
+    font-size: 2rem;
+  }
+  
+  .history-header {
+    font-size: 1.21rem;
+    color: var(--accent-blue);
+    margin-top: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .history-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 2.2rem;
+    width: 98vw;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Table styles -- unified color, centered headers */
+  .history-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: none;
+    margin: 0 auto;
+  }
+  
+  .history-table th,
+  .history-table td {
+    padding: 0.95rem 0.5rem;
+    border: none;
+    color: var(--primary-text);
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .history-table th {
+    background: #222226; /* Updated from #20222a */
+    color: var(--accent-blue);
+    font-weight: 700;
+    font-size: 1.07rem;
+  }
+  
+  /* No white alternating rows */
+  .history-table tbody tr {
+    background: transparent;
+    border-bottom: 0.7px solid var(--divider);
+  }
+  
+  .history-table tbody tr:hover {
+    background: #23232b;
+  }
+  

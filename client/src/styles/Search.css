@@ -1,0 +1,325 @@
+/* Inherit global variables from App.css */
+
+.search-bg {
+  background: var(--app-bg) !important;
+  min-height: calc(100vh - 100px); /* Accounts for the Navbar height */
+  padding: 2rem 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--primary-text);
+  width: 100%;
+}
+
+.search-container {
+  max-width: 1400px; /* Matches analytics max-width */
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title Styling */
+.search-title {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: var(--accent-blue);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.search-subtitle {
+  text-align: center;
+  color: var(--placeholder);
+  margin-bottom: 3.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.search-subtitle small {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--accent-blue);
+  opacity: 0.8;
+}
+
+/* Search Box Area */
+.search-box-wrapper {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 0.85rem;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.26);
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem; /* ✅ Reduced from 3rem to 2rem */
+  width: 100%;
+  max-width: 700px;
+  border: 1px solid var(--divider);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.search-box-wrapper:focus-within {
+  box-shadow: 0 8px 30px rgba(75, 130, 223, 0.15);
+  border-color: var(--accent-blue);
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  color: var(--primary-text);
+  font-size: 1.1rem;
+  outline: none;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.search-input::placeholder {
+  color: var(--placeholder);
+}
+
+.btn-search {
+  background: var(--accent-blue);
+  color: white;
+  border: none;
+  padding: 0 2rem;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-search:hover {
+  background: #3a6bc5;
+  transform: translateY(-1px);
+}
+
+.btn-search:disabled {
+  background: var(--divider);
+  color: var(--placeholder);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading Spinner */
+.loader {
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border-top: 3px solid white;
+  width: 20px;
+  height: 20px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ✅ NEW: Search Info Banner */
+.search-info {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+  color: var(--primary-text);
+  padding: 1rem 1.5rem;
+  border-radius: 0.85rem;
+  margin-bottom: 2.5rem; /* ✅ Spacing below the info banner */
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+}
+
+.search-info strong {
+  color: var(--accent-blue);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* Results Grid - Matches 'charts-grid' from analytics */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+  gap: 2rem;
+  width: 100%;
+  align-items: flex-start;
+}
+
+/* Employee Card - Matches 'chart-card' style */
+.employee-card {
+  background: var(--card-bg);
+  border-radius: 0.85rem;
+  padding: 1.5rem;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.26);
+  border: 1px solid transparent; /* For hover effect */
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+}
+
+.employee-card:hover {
+  transform: translateY(-4px) scale(1.012);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.33);
+  border-color: rgba(75, 130, 223, 0.3);
+}
+
+/* Match Badge */
+.match-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(33, 227, 153, 0.1);
+  color: var(--green);
+  padding: 6px 12px;
+  border-bottom-left-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid rgba(33, 227, 153, 0.2);
+  border-left: 1px solid rgba(33, 227, 153, 0.2);
+}
+
+.card-header {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--divider);
+  text-align: center;
+}
+
+.card-header h3 {
+  margin: 0;
+  color: var(--primary-text);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.card-role {
+  color: var(--accent-blue);
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  display: block;
+  font-weight: 500;
+}
+
+.card-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--placeholder);
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.value {
+  color: var(--primary-text);
+  font-weight: 500;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Empty & Error States */
+.no-results, .error-box {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--placeholder);
+  margin-top: 2rem;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 0.85rem;
+  width: 100%;
+  max-width: 600px;
+  border: 1px dashed var(--divider);
+}
+
+.error-box {
+  color: #ff6b6b;
+  border-color: rgba(255, 107, 107, 0.3);
+  background: rgba(255, 107, 107, 0.05);
+}
+
+/* ✅ NEW: Hint text styling */
+.hint {
+  color: var(--placeholder);
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+  font-style: italic;
+}
+
+/* Responsive Design (Matches analytics.css logic) */
+@media (max-width: 1400px) {
+  .results-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .search-info {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    padding: 0 1rem;
+  }
+
+  .search-title {
+    font-size: 1.8rem;
+  }
+
+  .search-box-wrapper {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+  
+  .btn-search {
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .search-info {
+    font-size: 0.9rem;
+    padding: 0.9rem 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .search-info strong {
+    font-size: 1.1rem;
+  }
+  
+  .results-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

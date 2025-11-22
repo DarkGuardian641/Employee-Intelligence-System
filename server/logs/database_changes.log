@@ -1,0 +1,222 @@
+
+======================================================================
+⏰ TIMESTAMP: 2025-10-31 10:10:11 IST
+🔔 ACTION: UPDATE
+📧 NOTIFICATION FOR: atharvab641@gmail.com
+👤 EMPLOYEE DATA:
+   📝 EMPLOYEE UPDATED
+   • ID: 5506
+   • Experience: 28.0 years
+   • Age: 35 years
+   • Gender: Male
+   • Salary: ₹1500000.0
+======================================================================
+
+============================================================
+⏰ TIME:   2025-11-18 20:38:53
+📂 LOG:    DATABASE CHANGE
+------------------------------------------------------------
+📝 ACTION: UPDATE
+👤 USER:   System
+📄 DATA:
+   • ID: 12
+   • Name: Atharva Too
+   • Experience Years: 4.0
+   • Age: 25
+   • Gender: Male
+   • Position: Junior
+   • Department: HR
+   • Location: Pune
+   • Job Role: Human Resources
+   • Salary: 550000.0
+============================================================
+
+============================================================
+⏰ TIME:   2025-11-18 20:52:42
+📂 LOG:    DATABASE CHANGE
+------------------------------------------------------------
+📝 ACTION: UPDATE
+👤 USER:   System
+📄 DATA:
+   • ID: 12
+   • Name: Atharva Too
+   • Experience Years: 4.0
+   • Age: 25
+   • Gender: Male
+   • Position: Junior
+   • Department: HR
+   • Location: Pune
+   • Job Role: Human Resources
+   • Salary: 650000.0
+============================================================
+
+============================================================
+⏰ TIME:   2025-11-18 22:33:40
+📂 LOG:    DATABASE CHANGE
+------------------------------------------------------------
+📝 ACTION: UPDATE
+👤 USER:   System
+📄 DATA:
+   • ID: 8
+   • Name: Meera Nair
+   • Experience Years: 1.5
+   • Age: 23
+   • Gender: Female
+   • Position: Junior Developer
+   • Department: Tech
+   • Location: Kochi
+   • Job Role: Full Stack Developer
+   • Salary: 500000.0
+============================================================
+
+============================================================
+⏰ TIME:   2025-11-18 22:49:58
+📂 LOG:    DATABASE CHANGE
+------------------------------------------------------------
+✅ ACTION: ADD
+👤 USER:   System
+📄 DATA:
+   • ID: 13
+   • Name: Akanksha Kanade
+   • Experience Years: 1.0
+   • Age: 22
+   • Gender: Female
+   • Position: Senior
+   • Department: Tech
+   • Location: Pune
+   • Job Role: AI Engineer
+   • Salary: 600000.0
+============================================================
+
+============================================================
+⏰ TIME:   2025-11-18 23:41:03
+📂 LOG:    DATABASE CHANGE
+------------------------------------------------------------
+📝 ACTION: UPDATE
+👤 USER:   System
+📄 DATA:
+   • ID: 13
+   • Name: Akanksha Kanade
+   • Experience Years: 1.0
+   • Age: 22
+   • Gender: Female
+   • Position: Senior
+   • Department: Tech
+   • Location: Pune
+   • Job Role: AI Engineer
+   • Salary: 650000.0
+============================================================
+
+============================================================
+⏰ TIME:   2025-11-19 10:51:06
+📂 LOG:    DATABASE CHANGE
+------------------------------------------------------------
+📝 ACTION: UPDATE
+👤 USER:   System
+📄 DATA:
+   • ID: 1
+   • Name: Rajesh Kumar
+   • Experience Years: 5.5
+   • Age: 28
+   • Gender: Male
+   • Position: Senior Developer
+   • Department: Tech
+   • Location: Pune
+   • Job Role: Full Stack Developer
+   • Salary: 860000.0
+============================================================
+
+============================================================
+⏰ TIME:   2025-11-19 10:56:31
+📂 LOG:    DATABASE CHANGE
+------------------------------------------------------------
+📝 ACTION: UPDATE
+👤 USER:   System
+📄 DATA:
+   • ID: 5
+   • Name: Vikram Singh
+   • Experience Years: 10.5
+   • Age: 40
+   • Gender: Male
+   • Position: Finance Manager
+   • Department: Finance
+   • Location: Delhi
+   • Job Role: Financial Analyst
+   • Salary: 1400000.0
+============================================================
+
+============================================================
+⏰ TIME:   2025-11-19 11:20:56
+📂 LOG:    DATABASE CHANGE
+------------------------------------------------------------
+✅ ACTION: ADD
+👤 USER:   System
+📄 DATA:
+   • ID: 14
+   • Name: Shravan Taware
+   • Experience Years: 1.0
+   • Age: 20
+   • Gender: Male
+   • Position: Junior
+   • Department: Tech
+   • Location: Pune
+   • Job Role: AI Engineer
+   • Salary: 750000.0
+============================================================
+
+============================================================
+⏰ TIME:   2025-11-19 11:21:34
+📂 LOG:    DATABASE CHANGE
+------------------------------------------------------------
+📝 ACTION: UPDATE
+👤 USER:   System
+📄 DATA:
+   • ID: 14
+   • Name: Shravan Taware
+   • Experience Years: 1.0
+   • Age: 20
+   • Gender: Male
+   • Position: Junior
+   • Department: Tech
+   • Location: Pune
+   • Job Role: AI Engineer
+   • Salary: 700000.0
+============================================================
+
+============================================================
+⏰ TIME:   2025-11-19 13:37:35
+📂 LOG:    DATABASE CHANGE
+------------------------------------------------------------
+📝 ACTION: UPDATE
+👤 USER:   System
+📄 DATA:
+   • ID: 13
+   • Name: Akanksha Kanade
+   • Experience Years: 1.0
+   • Age: 22
+   • Gender: Female
+   • Position: Senior
+   • Department: Tech
+   • Location: Pune
+   • Job Role: AI Engineer
+   • Salary: 670000.0
+============================================================
+
+============================================================
+⏰ TIME:   2025-11-19 14:10:13
+📂 LOG:    DATABASE CHANGE
+------------------------------------------------------------
+📝 ACTION: UPDATE
+👤 USER:   System
+📄 DATA:
+   • ID: 13
+   • Name: Akanksha Kanade
+   • Experience Years: 1.0
+   • Age: 22
+   • Gender: Female
+   • Position: Senior
+   • Department: Tech
+   • Location: Pune
+   • Job Role: AI Engineer
+   • Salary: 570000.0
+============================================================

@@ -1,0 +1,68 @@
+:root {
+  --app-bg: #2E2E2E;
+  --card-bg: #181818;
+  --accent-blue: #4b82df;
+  --primary-text: #f7f8fa;
+  --placeholder: #909193;
+  --divider: #404060;
+  --green: #21E399;
+}
+
+body {
+  background: var(--app-bg) !important;
+  color: var(--primary-text);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Main Layout Wrapper */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 0;
+  background: var(--app-bg);
+}
+
+/* Content Container */
+.content-container {
+  /* Critical: Pushes content down so Navbar doesn't cover it */
+  padding-top: 80px; 
+  width: 100%;
+  flex: 1;
+  position: relative;
+  background: var(--app-bg);
+}
+
+/* Dashboard Root (Optional helper class) */
+.dashboard-root {
+  min-height: 100vh;
+  min-width: 0;
+  width: 100vw;
+  background: var(--app-bg);
+  display: flex;
+  justify-content: center;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
